@@ -70,7 +70,7 @@ const products: Product[] = [
     description: 'A perfect balance of sweet and salty with a gooey caramel ribbon.',
     price: 6.75,
     imageId: 'salted-caramel-1',
-    inventory: 0,
+    inventory: 100, // Restocked for flavor of the month
   },
    {
     id: 'prod-007',
