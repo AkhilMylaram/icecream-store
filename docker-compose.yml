@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: icecream-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      # Mount initialization scripts to create schema
+      - ./auth-service/src/main/resources/db/migration:/docker-entrypoint-initdb.d
+    networks:
+      - icecream-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  auth-service:
+    build: ./auth-service
+    container_name: icecream-auth-service
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/postgres?currentSchema=auth_schema
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password
+      # Wait for postgres
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - icecream-network
+    ports:
+      - "8081:8081"
+
+  api-gateway:
+    build: ./api-gateway
+    container_name: icecream-gateway
+    environment:
+      # Override route URI to use internal docker hostname
+      SPRING_CLOUD_GATEWAY_ROUTES_0_URI: http://auth-service:8081
+    depends_on:
+      - auth-service
+    networks:
+      - icecream-network
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build: .
+    container_name: icecream-frontend
+    networks:
+      - icecream-network
+    ports:
+      - "3000:3000"
+    environment:
+      # If we had env vars for API URL, we'd set them here
+      NODE_ENV: production
+
+networks:
+  icecream-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
