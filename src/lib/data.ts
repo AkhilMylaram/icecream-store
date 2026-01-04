@@ -19,6 +19,12 @@ const promotions: Promotion[] = [
     description: 'Free toppings on any order over $20 this weekend!',
     discount: 0,
   },
+  {
+    id: 'promo-4',
+    title: 'Refer a Friend',
+    description: 'Refer a friend and you both get a free scoop on us!',
+    discount: 0,
+  }
 ];
 
 const products: Product[] = [

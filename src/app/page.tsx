@@ -211,7 +211,7 @@ export default function Home() {
               <h2 className="font-headline text-4xl md:text-5xl font-bold">Sweet Deals</h2>
               <p className="mt-4 text-lg text-muted-foreground">Don't miss out on our latest promotions!</p>
             </div>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {promotions.map((promo) => (
                 <Card key={promo.id} className="bg-card hover:shadow-lg transition-shadow">
                   <CardHeader>
