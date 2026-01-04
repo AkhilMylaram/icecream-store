@@ -11,7 +11,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 
 export default function Home() {
-  const featuredProducts = getAllProducts().slice(0, 6);
+  const featuredProducts = getAllProducts().slice(0, 8);
   const promotions = getPromotions();
   const pastOrders = getPastOrders();
 
@@ -91,13 +91,9 @@ export default function Home() {
         </section>
         
         <section id="ai-features" className="py-16 md:py-24 bg-background">
-          <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <CreateFlavorForm />
-            </div>
-            <div>
-              <RecommendationForm pastOrders={pastOrders} />
-            </div>
+          <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+            <CreateFlavorForm />
+            <RecommendationForm pastOrders={pastOrders} />
           </div>
         </section>
 
