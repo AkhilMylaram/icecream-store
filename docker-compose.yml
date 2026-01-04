@@ -12,8 +12,7 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      # Mount initialization scripts to create schema
-      - ./auth-service/src/main/resources/db/migration:/docker-entrypoint-initdb.d
+      - ./init-schema.sql:/docker-entrypoint-initdb.d/init-schema.sql
     networks:
       - icecream-network
     healthcheck:
