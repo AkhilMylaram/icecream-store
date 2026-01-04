@@ -41,7 +41,7 @@ const products: Product[] = [
   },
   {
     id: 'prod-003',
-    name: 'Summer Strawberry Swirl',
+    name: 'Strawberry Swirl',
     description: 'Fresh strawberry ice cream with chunks of real, ripe berries.',
     price: 6.25,
     imageId: 'strawberry-1',
@@ -105,7 +105,7 @@ const orders: Order[] = [
         id: 'ORD-12346',
         date: '2023-10-28',
         items: [
-            { productId: 'prod-003', name: 'Summer Strawberry Swirl', quantity: 2 },
+            { productId: 'prod-003', name: 'Strawberry Swirl', quantity: 2 },
         ],
         total: 12.50,
         status: 'Delivered'
@@ -158,7 +158,7 @@ export function getPromotionById(id?: string): Promotion | undefined {
 }
 
 export function getPastOrders(): string[] {
-    return ['Classic Vanilla Bean', 'Summer Strawberry Swirl', 'Cookie Dough Delight'];
+    return ['Classic Vanilla Bean', 'Strawberry Swirl', 'Cookie Dough Delight'];
 }
 
 export function getAllOrders(): Order[] {
