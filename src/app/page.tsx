@@ -25,7 +25,7 @@ export default function Home() {
   const featuredProducts = getAllProducts().slice(0, 8);
   const promotions = getPromotions();
   const flavorOfTheMonth = getProductById('prod-006'); // Salted Caramel Craze
-  
+
   const storyImage = PlaceHolderImages.find(p => p.id === 'story-1');
   const flavorOfTheMonthImage = flavorOfTheMonth ? PlaceHolderImages.find(p => p.id === flavorOfTheMonth.imageId) : undefined;
 
@@ -85,7 +85,7 @@ export default function Home() {
                 <p className="mt-4 text-lg text-muted-foreground">A special treat, just for you.</p>
               </div>
               <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-                <Image 
+                <Image
                   src={flavorOfTheMonthImage.imageUrl}
                   alt={flavorOfTheMonth.name}
                   width={600}

@@ -26,11 +26,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     useEffect(() => {
         const token = localStorage.getItem('accessToken');
         if (token) {
-            // In a real app, we would validate the token with the backend here
-            // For now, we'll just decode it simply or assume it's valid if present
-            // To be safe, let's just claim we are logged in.
-            // We can improve this by storing user details or decoding JWT.
-            setUser({ email: 'user@example.com', role: 'USER' }); // Placeholder
+            // Decode the JWT token to get user information
+            try {
+                const payload = JSON.parse(atob(token.split('.')[1]));
+                setUser({
+                    email: payload.sub || 'user@example.com',
+                    role: payload.role || 'USER'
+                });
+            } catch (error) {
+                console.error('Error decoding token:', error);
+                setUser({ email: 'user@example.com', role: 'USER' }); // Fallback
+            }
         }
         setLoading(false);
     }, []);
@@ -38,7 +44,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const login = (token: string, refreshToken: string) => {
         localStorage.setItem('accessToken', token);
         localStorage.setItem('refreshToken', refreshToken);
-        setUser({ email: 'user@example.com', role: 'USER' }); // Placeholder
+        try {
+            // Decode the JWT token to get user information
+            const payload = JSON.parse(atob(token.split('.')[1]));
+            setUser({
+                email: payload.sub || 'user@example.com',
+                role: payload.role || 'USER'
+            });
+        } catch (error) {
+            console.error('Error decoding token:', error);
+            setUser({ email: 'user@example.com', role: 'USER' }); // Fallback
+        }
         router.push('/');
     };
 

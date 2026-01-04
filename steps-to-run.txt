@@ -1,0 +1,143 @@
+# Steps to Run the Ice Cream Store Application
+
+## Overview
+This document provides detailed steps to run the Ice Cream Store application using Docker. The application consists of multiple microservices that work together to provide a complete solution.
+
+## Prerequisites
+- Docker (version 20.10 or higher)
+- Docker Compose (version 2.0 or higher)
+- Git (for cloning the repository, if needed)
+
+## Services Architecture
+The application consists of the following services:
+
+1. **PostgreSQL Database** - Primary database for all services
+2. **Auth Service** - Handles user authentication and authorization (port 8081)
+3. **API Service** - Business logic service (port 8082)
+4. **API Gateway** - Routes requests to appropriate services (port 8080)
+5. **Frontend** - Next.js web application (port 3000)
+
+## Service Dependencies
+- PostgreSQL must start first and be healthy before other services
+- Auth Service and API Service depend on PostgreSQL
+- API Gateway depends on Auth Service and API Service
+- Frontend communicates with API Gateway
+
+## Environment Variables
+The following environment variables are configured in the docker-compose.yml file:
+
+### PostgreSQL
+- POSTGRES_USER: postgres
+- POSTGRES_PASSWORD: password
+- POSTGRES_DB: postgres
+
+### Auth Service
+- SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/postgres?currentSchema=auth_schema
+- SPRING_DATASOURCE_USERNAME: postgres
+- SPRING_DATASOURCE_PASSWORD: password
+
+### API Service
+- SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/postgres?currentSchema=public
+- SPRING_DATASOURCE_USERNAME: postgres
+- SPRING_DATASOURCE_PASSWORD: password
+
+### Frontend
+- NODE_ENV: production
+
+## Step-by-Step Instructions
+
+### 1. Clone the Repository (if needed)
+```bash
+git clone <repository-url>
+cd icecream-store
+```
+
+### 2. Navigate to Project Directory
+```bash
+cd icecream-store
+```
+
+### 3. Build and Start All Services
+```bash
+docker-compose up --build
+```
+
+This command will:
+- Build all Docker images from their respective Dockerfiles
+- Start all services in the correct order based on dependencies
+- Show logs from all services in the terminal
+
+### 4. Alternative: Run in Background
+If you want to run the services in the background:
+```bash
+docker-compose up --build -d
+```
+
+To view logs after running in background:
+```bash
+docker-compose logs -f
+```
+
+### 5. Access the Application
+Once all services are running, you can access:
+- Frontend: http://localhost:3000
+- API Gateway: http://localhost:8080
+- Auth Service: http://localhost:8081
+- API Service: http://localhost:8082
+- PostgreSQL: localhost:5432 (for external connections)
+
+### 6. Stop the Application
+To stop all services:
+```bash
+# If running in foreground (Ctrl+C in the terminal)
+# Or if running in background:
+docker-compose down
+```
+
+### 7. Stop and Remove Volumes (if needed)
+To completely reset the application (this will remove all persistent data):
+```bash
+docker-compose down -v
+```
+
+## Docker Compose Configuration Details
+
+The docker-compose.yml file defines the following:
+
+- **Network**: All services run on a shared network named "icecream-network"
+- **Health Checks**: PostgreSQL has a health check to ensure it's ready before other services start
+- **Build Contexts**: Each service builds from its respective directory with Dockerfiles now centralized in the dockerfiles/ directory
+- **Volume**: PostgreSQL data is persisted using a named volume "postgres_data"
+
+## Dockerfiles Location
+All Dockerfiles have been centralized in the `dockerfiles/` directory:
+- `dockerfiles/frontend.Dockerfile` - For the Next.js frontend
+- `dockerfiles/auth-service.Dockerfile` - For the authentication service
+- `dockerfiles/api-service.Dockerfile` - For the API service
+- `dockerfiles/api-gateway.Dockerfile` - For the API gateway
+
+## Troubleshooting
+
+### Common Issues:
+
+1. **Port Already in Use**: Make sure ports 3000, 5432, 8080, 8081, 8082 are not in use by other applications.
+
+2. **Docker Build Failures**: Check that all required source files are present in their respective service directories.
+
+3. **Database Connection Issues**: Ensure PostgreSQL is healthy before other services try to connect.
+
+4. **Service Dependencies**: The docker-compose configuration handles service dependencies, but if you start services manually, ensure they start in the correct order.
+
+### Useful Commands:
+
+- View running containers: `docker-compose ps`
+- View logs for specific service: `docker-compose logs <service-name>`
+- Execute command in running container: `docker-compose exec <service-name> <command>`
+- Rebuild specific service: `docker-compose build <service-name>`
+
+## Additional Notes
+
+- The application uses schema-based separation in PostgreSQL (auth_schema for auth service, public for API service)
+- Health checks are implemented for PostgreSQL and the Java services
+- The frontend is built using a multi-stage Docker build for optimized production images
+- All services run as non-root users for security

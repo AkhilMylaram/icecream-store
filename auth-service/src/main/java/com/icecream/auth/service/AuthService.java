@@ -35,6 +35,7 @@ public class AuthService {
     @Value("${application.security.jwt.refresh-token.expiration}")
     private long refreshExpiration;
 
+    @Transactional
     public AuthResponse signup(SignupRequest request) {
         if (userRepository.existsByEmail(request.getEmail())) {
             throw new RuntimeException("Email already exists");
@@ -54,6 +55,7 @@ public class AuthService {
                 .build();
     }
 
+    @Transactional
     public AuthResponse login(LoginRequest request) {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
@@ -111,7 +113,7 @@ public class AuthService {
         try {
             String username = jwtService.extractUsername(token);
             // Optionally check validity against DB or just signature
-            return username != null && !jwtService.isTokenValid(token, User.builder().email(username).build()); // Simplified
+            return username != null && jwtService.isTokenValid(token, User.builder().email(username).build()); // Simplified
                                                                                                                 // user
                                                                                                                 // details
         } catch (Exception e) {

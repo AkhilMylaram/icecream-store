@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Outfit } from 'next/font/google';
 import './globals.css';
 import { AuthProvider } from '@/hooks/useAuth';
-import Navigation from '@/components/layout/Navigation';
+import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${outfit.variable} font-sans antialiased`}>
         <AuthProvider>
-          <Navigation />
+          <Header />
           {children}
           <Footer />
         </AuthProvider>

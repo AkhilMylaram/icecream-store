@@ -18,6 +18,7 @@ import {
 } from '@/components/ui/sheet';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import { useAuth } from '@/hooks/useAuth';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -27,6 +28,7 @@ const navLinks = [
 
 export default function Header() {
   const pathname = usePathname();
+  const { isAuthenticated, logout } = useAuth();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -97,12 +99,23 @@ export default function Header() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuLabel>My Account</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem asChild><Link href="#">Profile</Link></DropdownMenuItem>
-              <DropdownMenuItem asChild><Link href="/orders">Orders</Link></DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem asChild><Link href="/login">Log In</Link></DropdownMenuItem>
+              {isAuthenticated ? (
+                <>
+                  <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem asChild><Link href="#">Profile</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link href="/orders">Orders</Link></DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem onClick={logout}>Log Out</DropdownMenuItem>
+                </>
+              ) : (
+                <>
+                  <DropdownMenuLabel>Account</DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem asChild><Link href="/auth/signin">Log In</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link href="/auth/signup">Sign Up</Link></DropdownMenuItem>
+                </>
+              )}
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
