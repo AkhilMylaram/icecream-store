@@ -1,21 +1,31 @@
+'use client';
+
 import Link from 'next/link';
 import { ArrowRight, Gift, IceCream, ShoppingCart, Star } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { getAllProducts, getPromotions, getProductById } from '@/lib/data';
 import ProductGrid from '@/components/products/ProductGrid';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { PlaceHolderImages, type ImagePlaceholder } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 
 export default function Home() {
+  const [heroImage, setHeroImage] = useState<ImagePlaceholder | undefined>(undefined);
+
+  useEffect(() => {
+    const heroImages = PlaceHolderImages.filter(p => p.id.startsWith('hero-'));
+    const randomHeroImage = heroImages[Math.floor(Math.random() * heroImages.length)];
+    setHeroImage(randomHeroImage);
+  }, []);
+
   const featuredProducts = getAllProducts().slice(0, 8);
   const promotions = getPromotions();
   const flavorOfTheMonth = getProductById('prod-006'); // Salted Caramel Craze
   
-  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-1');
   const storyImage = PlaceHolderImages.find(p => p.id === 'story-1');
   const flavorOfTheMonthImage = flavorOfTheMonth ? PlaceHolderImages.find(p => p.id === flavorOfTheMonth.imageId) : undefined;
 
@@ -24,7 +34,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
         <section className="relative w-full h-[60vh] md:h-[70vh] flex items-center justify-center text-center text-white">
-          {heroImage && (
+          {heroImage ? (
             <Image
               src={heroImage.imageUrl}
               alt={heroImage.description}
@@ -33,11 +43,13 @@ export default function Home() {
               priority
               data-ai-hint={heroImage.imageHint}
             />
+          ) : (
+            <div className="w-full h-full bg-secondary" />
           )}
           <div className="absolute inset-0 bg-black/50" />
           <div className="relative z-10 p-4">
             <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tighter text-shadow">
-              Discover Your Perfect Scoop
+              {heroImage ? heroImage.description : 'Discover Your Perfect Scoop'}
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-shadow-sm">
               From timeless classics to daring new flavors, Creamery Central is your gateway to the world of artisanal ice cream.

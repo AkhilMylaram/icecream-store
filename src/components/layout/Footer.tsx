@@ -19,6 +19,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Creamery Central. All rights reserved.</p>
+          <p className="mt-2">Designed and Developed by Akhil Hegde</p>
         </div>
       </div>
     </footer>

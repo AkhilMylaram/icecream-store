@@ -7,6 +7,60 @@
       "imageHint": "ice cream assortment"
     },
     {
+      "id": "hero-2",
+      "description": "Three delicious ice cream cones held up.",
+      "imageUrl": "https://images.unsplash.com/photo-1570197788417-0e82375c934d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpY2UlMjBjcmVhbSUyMGNvbmVzfGVufDB8fHx8MTc2NzM4ODQ4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ice cream cones"
+    },
+    {
+      "id": "hero-3",
+      "description": "A close-up of a melting scoop of raspberry ice cream.",
+      "imageUrl": "https://images.unsplash.com/photo-1629385011158-6935a3962b32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxpY2UlMjBjcmVhbSUyMG1lbHRpbmd8ZW58MHx8fHwxNzY3Mzg4NDgyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ice cream melting"
+    },
+    {
+      "id": "hero-4",
+      "description": "Artisanal ice cream being scooped into a cup.",
+      "imageUrl": "https://images.unsplash.com/photo-1563805042-76-24228494f8dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhcnRpc2FuYWwlMjBpY2UlMjBjcmVhbXxlbnwwfHx8fDE3Njc0ODk5NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "artisanal ice-cream"
+    },
+    {
+      "id": "hero-5",
+      "description": "A beautiful spread of various ice cream toppings.",
+      "imageUrl": "https://images.unsplash.com/photo-1551024601-bec78aea704b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpY2UlMjBjcmVhbSUyMHRvcHBpbmdzfGVufDB8fHx8MTc2NzM4ODQ4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ice cream toppings"
+    },
+    {
+      "id": "hero-6",
+      "description": "A chocolate lava cake with a scoop of vanilla ice cream.",
+      "imageUrl": "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpY2UlMjBjcmVhbSUyMGRlc3NlcnR8ZW58MHx8fHwxNzY3NDg5OTUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ice cream dessert"
+    },
+    {
+      "id": "hero-7",
+      "description": "A person enjoying a large ice cream sundae.",
+      "imageUrl": "https://images.unsplash.com/photo-1579954115545-395982c78959?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpY2UlMjBjcmVhbSUyMHN1bmRhZXxlbnwwfHx8fDE3Njc0ODk5NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ice cream sundae"
+    },
+    {
+      "id": "hero-8",
+      "description": "Colorful popsicles lined up in a row.",
+      "imageUrl": "https://images.unsplash.com/photo-1534723328976-59c501a416da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3BzaWNsZXN8ZW58MHx8fHwxNzY3Mzg4NDgyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "colorful popsicles"
+    },
+    {
+      "id": "hero-9",
+      "description": "A waffle cone filled with scoops of different flavors.",
+      "imageUrl": "https://images.unsplash.com/photo-1559703248-dca74e4400de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpY2UlMjBjcmVhbSUyMHdhZmZsZSUyMGNvbmV8ZW58MHx8fHwxNzY3NDg5OTUyfDA&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "waffle cone"
+    },
+    {
+      "id": "hero-10",
+      "description": "A variety of ice cream tubs in a freezer.",
+      "imageUrl": "https://images.unsplash.com/photo-1627223696238-71b9351a2a5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpY2UlMjBjcmVhbSUyMHR1YnN8ZW58MHx8fHwxNzY3Mzg4NDgyfDA&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "ice cream tubs"
+    },
+    {
       "id": "vanilla-1",
       "description": "A classic scoop of creamy vanilla bean ice cream.",
       "imageUrl": "https://images.unsplash.com/photo-1691431619953-06a2c4220cfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx2YW5pbGxhJTIwaWNlLWNyZWFtfGVufDB8fHx8MTc2NzM4ODQ4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
@@ -15,49 +69,49 @@
     {
       "id": "chocolate-1",
       "description": "A rich and decadent scoop of dark chocolate ice cream.",
-      "imageUrl": "https://images.unsplash.com/photo-1630301786766-70c27110f563?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjaG9jb2xhdGUlMjBpY2UtY3JlYW18ZW58MHx8fHwxNzY3NDg5NTE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1630301786766-70c27110f563?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjaG9jb2xhdGUlMjBpY2UtY3JlYW18ZW58MHx8fHwxNzY3NDg5NTE2fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "chocolate ice-cream"
     },
     {
       "id": "strawberry-1",
       "description": "A fresh and fruity scoop of strawberry ice cream with real fruit pieces.",
-      "imageUrl": "https://images.unsplash.com/photo-1589936457084-d951d698bd0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzdHJhd2JlcnJ5JTIwaWNlLWNyZWFtfGVufDB8fHx8MTc2NzM4ODQ4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1589936457084-d951d698bd0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzdHJhd2JlcnJ5JTIwaWNlLWNyZWFtfGVufDB8fHx8MTc2NzM4ODQ4Mnww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "strawberry ice-cream"
     },
     {
       "id": "mint-1",
       "description": "A refreshing scoop of mint chocolate chip ice cream.",
-      "imageUrl": "https://images.unsplash.com/photo-1561876455-5dfe9d2f2f0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWludCUyMGljZS1jcmVhbXxlbnwwfHx8fDE3Njc0ODk1MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1561876455-5dfe9d2f2f0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWludCUyMGljZS1jcmVhbXxlbnwwfHx8fDE3Njc0ODk1MTZ8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "mint ice-cream"
     },
     {
       "id": "cookie-dough-1",
       "description": "Vanilla ice cream packed with chunks of cookie dough and chocolate chips.",
-      "imageUrl": "https://images.unsplash.com/photo-1506184341422-6cc152ae474b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb29raWUlMjBkb3VnaHxlbnwwfHx8fDE3Njc0ODk1MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1506184341422-6cc152ae474b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb29raWUlMjBkb3VnaHxlbnwwfHx8fDE3Njc0ODk1MTZ8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "cookie dough"
     },
     {
       "id": "salted-caramel-1",
       "description": "Sweet and salty caramel swirl ice cream.",
-      "imageUrl": "https://images.unsplash.com/photo-1627373717516-0f4bb24c487d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjYXJhbWVsJTIwaWNlLWNyZWFtfGVufDB8fHx8MTc2NzM4ODQ4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1627373717516-0f4bb24c487d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjYXJhbWVsJTIwaWNlLWNyZWFtfGVufDB8fHx8MTc2NzM4ODQ4Mnww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "caramel ice-cream"
     },
     {
       "id": "pistachio-1",
       "description": "Nutty and delicious pistachio ice cream.",
-      "imageUrl": "https://images.unsplash.com/photo-1581098721508-b9c242bb2e1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaXN0YWNoaW8lMjBpY2UtY3JlYW18ZW58MHx8fHwxNzY3Mzg4NDgyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1581098721508-b9c242bb2e1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaXN0YWNoaW8lMjBpY2UtY3JlYW18ZW58MHx8fHwxNzY3Mzg4NDgyfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "pistachio ice-cream"
     },
     {
       "id": "coffee-1",
       "description": "Rich and aromatic coffee-flavored ice cream.",
-      "imageUrl": "https://images.unsplash.com/photo-1565899947426-b2424039f921?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBpY2UtY3JlYW18ZW58MHx8fHwxNzY3NDg5NTE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1565899947426-b2424039f921?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBpY2UtY3JlYW18ZW58MHx8fHwxNzY3NDg5NTE2fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "coffee ice-cream"
     },
     {
       "id": "story-1",
       "description": "A friendly person serving a scoop of ice cream in a cone.",
-      "imageUrl": "https://images.unsplash.com/photo-1651383139136-a23aa33bc9ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpY2UtY3JlYW0lMjBzY29vcGluZ3xlbnwwfHx8fDE3Njc0ODk5NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1651383139136-a23aa33bc9ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpY2UtY3JlYW0lMjBzY29vcGluZ3xlbnwwfHx8fDE3Njc0ODk5NTJ8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "ice-cream scooping"
     }
   ]

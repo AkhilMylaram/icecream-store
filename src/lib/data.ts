@@ -3,8 +3,8 @@ import type { Product, Promotion, Order } from './types';
 const promotions: Promotion[] = [
   {
     id: 'promo-1',
-    title: 'Summer Special',
-    description: 'Get 20% off all fruity flavors!',
+    title: 'Fruity Fusion',
+    description: 'Enjoy a burst of fruity flavors with 20% off!',
     discount: 20,
   },
   {
