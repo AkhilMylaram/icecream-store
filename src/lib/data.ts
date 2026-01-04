@@ -137,7 +137,7 @@ export function getAllProducts(): Product[] {
 }
 
 export function getFeaturedProducts(): Product[] {
-  return products.slice(0, 3);
+  return products.slice(0, 6);
 }
 
 export function getProductById(id: string): Product | undefined {

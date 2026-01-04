@@ -37,7 +37,7 @@ export default function RecommendationForm({ pastOrders }: RecommendationFormPro
   }, [state, toast]);
 
   return (
-    <Card className="max-w-3xl mx-auto border-2 border-primary/20 shadow-xl">
+    <Card className="h-full border-2 border-primary/20 shadow-xl">
       <CardHeader className="text-center">
         <div className="mx-auto bg-primary text-primary-foreground rounded-full p-3 w-fit mb-4">
             <Wand2 className="h-8 w-8" />

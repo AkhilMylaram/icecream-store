@@ -2,15 +2,16 @@ import Link from 'next/link';
 import { ArrowRight, Gift } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-import { getFeaturedProducts, getPromotions, getPastOrders } from '@/lib/data';
+import { getAllProducts, getPromotions, getPastOrders } from '@/lib/data';
 import ProductGrid from '@/components/products/ProductGrid';
 import RecommendationForm from '@/components/recommendations/RecommendationForm';
+import CreateFlavorForm from '@/components/CreateFlavorForm';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 
 export default function Home() {
-  const featuredProducts = getFeaturedProducts();
+  const featuredProducts = getAllProducts().slice(0, 6);
   const promotions = getPromotions();
   const pastOrders = getPastOrders();
 
@@ -43,12 +44,6 @@ export default function Home() {
                 Explore Flavors <ArrowRight className="ml-2" />
               </Link>
             </Button>
-          </div>
-        </section>
-
-        <section id="recommendations" className="py-16 md:py-24 bg-background">
-          <div className="container mx-auto px-4">
-            <RecommendationForm pastOrders={pastOrders} />
           </div>
         </section>
 
@@ -94,6 +89,18 @@ export default function Home() {
             </div>
           </div>
         </section>
+        
+        <section id="ai-features" className="py-16 md:py-24 bg-background">
+          <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <CreateFlavorForm />
+            </div>
+            <div>
+              <RecommendationForm pastOrders={pastOrders} />
+            </div>
+          </div>
+        </section>
+
       </main>
     </div>
   );
