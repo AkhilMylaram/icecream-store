@@ -1,3 +1,58 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-1",
+      "description": "A vibrant and colorful assortment of ice cream scoops.",
+      "imageUrl": "https://images.unsplash.com/photo-1708782343454-5d66dda6e107?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxpY2UlMjBjcmVhbSUyMGFzc29ydG1lbnR8ZW58MHx8fHwxNzY3Mzg4NDgyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ice cream assortment"
+    },
+    {
+      "id": "vanilla-1",
+      "description": "A classic scoop of creamy vanilla bean ice cream.",
+      "imageUrl": "https://images.unsplash.com/photo-1691431619953-06a2c4220cfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx2YW5pbGxhJTIwaWNlLWNyZWFtfGVufDB8fHx8MTc2NzM4ODQ4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "vanilla ice-cream"
+    },
+    {
+      "id": "chocolate-1",
+      "description": "A rich and decadent scoop of dark chocolate ice cream.",
+      "imageUrl": "https://images.unsplash.com/photo-1630301786766-70c27110f563?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjaG9jb2xhdGUlMjBpY2UtY3JlYW18ZW58MHx8fHwxNzY3NDg5NTE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chocolate ice-cream"
+    },
+    {
+      "id": "strawberry-1",
+      "description": "A fresh and fruity scoop of strawberry ice cream with real fruit pieces.",
+      "imageUrl": "https://images.unsplash.com/photo-1589936457084-d951d698bd0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzdHJhd2JlcnJ5JTIwaWNlLWNyZWFtfGVufDB8fHx8MTc2NzM4ODQ4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "strawberry ice-cream"
+    },
+    {
+      "id": "mint-1",
+      "description": "A refreshing scoop of mint chocolate chip ice cream.",
+      "imageUrl": "https://images.unsplash.com/photo-1561876455-5dfe9d2f2f0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWludCUyMGljZS1jcmVhbXxlbnwwfHx8fDE3Njc0ODk1MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mint ice-cream"
+    },
+    {
+      "id": "cookie-dough-1",
+      "description": "Vanilla ice cream packed with chunks of cookie dough and chocolate chips.",
+      "imageUrl": "https://images.unsplash.com/photo-1506184341422-6cc152ae474b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb29raWUlMjBkb3VnaHxlbnwwfHx8fDE3Njc0ODk1MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cookie dough"
+    },
+    {
+      "id": "salted-caramel-1",
+      "description": "Sweet and salty caramel swirl ice cream.",
+      "imageUrl": "https://images.unsplash.com/photo-1627373717516-0f4bb24c487d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjYXJhbWVsJTIwaWNlLWNyZWFtfGVufDB8fHx8MTc2NzM4ODQ4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "caramel ice-cream"
+    },
+    {
+      "id": "pistachio-1",
+      "description": "Nutty and delicious pistachio ice cream.",
+      "imageUrl": "https://images.unsplash.com/photo-1581098721508-b9c242bb2e1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaXN0YWNoaW8lMjBpY2UtY3JlYW18ZW58MHx8fHwxNzY3Mzg4NDgyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pistachio ice-cream"
+    },
+    {
+      "id": "coffee-1",
+      "description": "Rich and aromatic coffee-flavored ice cream.",
+      "imageUrl": "https://images.unsplash.com/photo-1565899947426-b2424039f921?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBpY2UtY3JlYW18ZW58MHx8fHwxNzY3NDg5NTE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coffee ice-cream"
+    }
+  ]
 }
